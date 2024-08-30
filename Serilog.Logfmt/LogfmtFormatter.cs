@@ -95,6 +95,9 @@ namespace Serilog.Logfmt
                 case LogfmtStackTraceFormat.SingleLine:
                     output.Write(exception.StackTrace.Replace("\n", "").Replace("\r",""));
                     break;
+                case LogfmtStackTraceFormat.SingleLineKeyed:
+                    output.Write("stack_trace=\"{0}\" ", exception.StackTrace.Replace("\n", "").Replace("\r", ""));
+                    break;
                 default: break;
             }
             output.WriteLine();

@@ -8,6 +8,7 @@ namespace Serilog.Logfmt
     {
         None = 0,
         All = 1,
-        SingleLine = 2
+        SingleLine = 2,
+        SingleLineKeyed = 3,
     }
 }
